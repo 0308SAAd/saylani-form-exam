@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body><br><br>
+    <form action="https://formsubmit.co/hammadn788@gmail.com" method="POST">
+<div class="container">
+    <h2>Student Registration Form of saylani</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName" required>
+
+        <label for="cnic">CNIC:</label>
+        <input type="text" id="cnic" name="cnic" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="Math">AI & Chatbot</option>
+            <option value="Science">Science</option>
+            <option value="English">English</option>
+        </select>
+
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        // Basic form validation
+        var name = document.getElementById('name').value;
+        var fatherName = document.getElementById('fatherName').value;
+        var cnic = document.getElementById('cnic').value;
+        var course = document.getElementById('course').value;
+        var rollNumber = document.getElementById('rollNumber').value;
+
+        if (name == "" || fatherName == "" || cnic == "" || course == "" || rollNumber == "") {
+            alert("Please fill out all fields");
+            return false;
+        }
+
+        // Additional validation logic can be added here
+
+        return true;
+    }
+</script>
+
+
+
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="gemni-nodejs"
+  agent-id="cbe1ca5a-6a63-4b77-82c7-03abc60f3b4d"
+  language-code="en"
+></df-messenger>
+
+</body>
+</html>
